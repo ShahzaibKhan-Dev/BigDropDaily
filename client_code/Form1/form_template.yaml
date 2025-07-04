@@ -1,20 +1,92 @@
 components:
 - components:
-  - layout_properties: {grid_position: 'LTZRQB,TQDGMS'}
+  - layout_properties: {grid_position: 'NLCUIT,KHPQTL'}
     name: label_2
-    properties: {bold: true, text: Create an account}
+    properties: {bold: true, font: '22', font_size: 22, text: Create an account, visible: true}
     type: Label
+  - layout_properties: {grid_position: 'SYYBJE,ISLOLX'}
+    name: label_3
+    properties: {align: left, bold: true, spacing_above: none, spacing_below: none, text: Username}
+    type: Label
+  - event_bindings: {lost_focus: Username}
+    layout_properties: {grid_position: 'DGYFNP,SCXOLQ'}
+    name: text_box_1
+    properties: {align: left, enabled: true, text: Username, visible: false}
+    type: TextBox
+  - layout_properties: {grid_position: 'XKJGMR,TTPKZG'}
+    name: label_6
+    properties: {align: left, bold: true, text: Password}
+    type: Label
+  - layout_properties: {grid_position: 'RJMUOZ,TRQGJK'}
+    name: spacer_1
+    properties: {height: -126}
+    type: Spacer
+  - layout_properties: {grid_position: 'PYXIUB,MFGKCZ'}
+    name: label_8
+    properties:
+      bold: true
+      font_size: 12
+      text: |+
+        Create a strong password (min 8 characters with uppercase, number & symbol)
+
+    type: Label
+  - layout_properties: {grid_position: 'MCSUNW,ERGOEQ'}
+    name: text_box_2
+    properties: {hide_text: false, spacing_above: none, spacing_below: none, text: Password, visible: false}
+    type: TextBox
+  - layout_properties: {grid_position: 'RGYGYN,OHBDLE'}
+    name: label_7
+    properties: {bold: true, text: Country}
+    type: Label
+  - event_bindings: {lost_focus: text_box_3_lost_focus}
+    layout_properties: {grid_position: 'SKKTQS,WYECRM'}
+    name: text_box_3
+    properties: {background: 'theme:Primary', enabled: true, foreground: 'theme:On Primary Container'}
+    type: TextBox
+  - layout_properties: {grid_position: 'CAZTTQ,NCVAIX'}
+    name: label_9
+    properties: {bold: true, text: Email}
+    type: Label
+  - event_bindings: {show: text_box_4_show}
+    layout_properties: {grid_position: 'QIOCFD,HXNJXE'}
+    name: text_box_4
+    properties: {background: 'theme:Primary', foreground: 'theme:On Primary Container'}
+    type: TextBox
+  - layout_properties: {grid_position: 'GKIIMK,UHYCGT'}
+    name: label_10
+    properties: {bold: true, text: Phone no}
+    type: Label
+  - layout_properties: {grid_position: 'TRFFTN,USIEIJ'}
+    name: text_box_5
+    properties: {background: 'theme:Primary', foreground: 'theme:On Primary Container'}
+    type: TextBox
+  - layout_properties: {grid_position: 'RMLXCW,DYCORX'}
+    name: label_11
+    properties: {bold: true, text: Date of Birth}
+    type: Label
+  - layout_properties: {full_width_row: true, grid_position: 'HLFMRV,KFVGKM'}
+    name: text_box_6
+    properties: {background: 'theme:Primary', foreground: 'theme:On Primary Container'}
+    type: TextBox
   layout_properties: {slot: default}
   name: content_panel
-  properties: {col_widths: '{}'}
+  properties: {background: 'theme:On Primary Container', col_widths: '{}', foreground: 'theme:Surface Variant', wrap_on: mobile}
   type: ColumnPanel
-- layout_properties: {slot: nav-right}
+- components:
+  - name: label_5
+    properties: {}
+    type: Label
+  layout_properties: {slot: nav-right}
   name: navbar_links
   properties: {}
   type: FlowPanel
+- layout_properties: {slot: left-nav}
+  name: label_4
+  properties: {}
+  type: Label
 - layout_properties: {slot: title}
   name: label_1
-  properties: {align: left, bold: true, text: BigDropDaily, underline: false}
+  properties: {background: 'theme:On Primary', bold: true, foreground: 'theme:Primary', text: BigDropDaily}
   type: Label
 container:
   properties: {html: '@theme:standard-page.html'}
